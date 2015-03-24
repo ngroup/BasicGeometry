@@ -6,14 +6,17 @@ This simple library is for dealing with the questions like "point is inside or o
 ```python
 import whichside as ws
 
-# polygon
+# create a Polygon
 polygon = ws.Polygon()
+
+# add vertex by the Polygon.add_vertex(x, y) method
 polygon.add_vertex(1, 1)
 polygon.add_vertex(1, 2)
 polygon.add_vertex(2, 3)
 polygon.add_vertex(3, 2.6)
 polygon.add_vertex(2.5, 0)
 
+# tell whether a point is inside the polygon
 polygon.contains(1.5, 1.5) # True
 polygon.contains(0, 1.5) # False
 ```
