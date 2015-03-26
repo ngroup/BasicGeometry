@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
-from polygon import Polygon
-from line import Line
+from whichside.polygon import Polygon
+from whichside.line import Line
 
 class TestPolygon(unittest.TestCase):
     def setUp(self):
