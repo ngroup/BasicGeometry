@@ -3,6 +3,7 @@ import unittest
 from whichside.polygon import Polygon
 from whichside.line import Line
 
+
 class TestPolygon(unittest.TestCase):
     def setUp(self):
         pass
@@ -45,7 +46,6 @@ class TestLine(unittest.TestCase):
         line = Line([1.0, 1.0], [-2.0, -2.5])
         self.assertFalse(line.is_clockwise_to_point(0.0, 2.0))
         self.assertTrue(line.is_clockwise_to_point(0, -2))
-
 
 
 if __name__ == '__main__':
