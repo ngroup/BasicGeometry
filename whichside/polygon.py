@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Polygon(object):
     def __init__(self):
         self.vertices = []
