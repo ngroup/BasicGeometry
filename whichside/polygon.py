@@ -8,6 +8,10 @@ class Polygon(object):
     def add_vertex(self, x, y):
         self.vertices.append((x, y))
 
+    def shift(self, x, y):
+        new_vertices = [(px + x, py + y) for px, py in self.vertices]
+        self.vertices = new_vertices
+
     def contains(self, x, y):
         """Determine if a point is inside a given polygon or not
         Uses the 'Ray Casting' algorithm
