@@ -12,6 +12,10 @@ class Polygon(object):
         new_vertices = [(px + x, py + y) for px, py in self.vertices]
         self.vertices = new_vertices
 
+    def reflect_x(self):
+        new_vertices = [(px, -1 * py) for px, py in self.vertices]
+        self.vertices = new_vertices
+
     def contains(self, x, y):
         """Determine if a point is inside a given polygon or not
         Uses the 'Ray Casting' algorithm
