@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import unittest
-from whichside.polygon import Polygon
-from whichside.line import Line
+from BasicGeometry.polygon import Polygon
+from BasicGeometry.line import Line
+from BasicGeometry import Vector2D
 
 
 class TestPolygon(unittest.TestCase):
@@ -46,6 +47,24 @@ class TestLine(unittest.TestCase):
         line = Line([1.0, 1.0], [-2.0, -2.5])
         self.assertFalse(line.is_clockwise_to_point(0.0, 2.0))
         self.assertTrue(line.is_clockwise_to_point(0, -2))
+
+
+class TestLine(unittest.TestCase):
+    def setUp(self):
+        pass
+
+    def test_Vector2D(self):
+        vec = Vector2D(1, 2)
+        vec2 = Vector2D(3, 5)
+        vec2 -= vec
+        print(vec2)
+        print(vec2.dot(vec))
+        print(vec.x, vec.y, vec[0], vec[1])
+        print(vec.length)
+        print(vec + vec, vec - vec)
+        # self.assertFalse(line.is_clockwise_to_point(1, 0))
+        # self.assertTrue(line.is_clockwise_to_point(1.5, 3.0))
+
 
 
 if __name__ == '__main__':
