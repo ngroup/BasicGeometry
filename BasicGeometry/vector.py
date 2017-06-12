@@ -1,3 +1,4 @@
+import numpy as np
 
 
 class Vector2D(tuple):
@@ -38,17 +39,29 @@ class Vector2D(tuple):
 
     __isub__ = __sub__
 
+    def __mul__(self, other):
+        """multiply the vector by a scalar
+        """
+        try:
+            x, y = self
+            other = float(other)
+        except TypeError:
+            return NotImplemented
+        return tuple.__new__(Vector2D, (x * other, y * other))
+
+    __rmul__ = __imul__ = __mul__
+
     def __eq__(self, other):
         try:
             return (self[0] == other[0] and self[1] == other[1]
-                and len(other) == 2)
+                    and len(other) == 2)
         except (TypeError, IndexError):
             return False
 
     def __ne__(self, other):
         try:
             return (self[0] != other[0] or self[1] != other[1]
-                or len(other) != 2)
+                    or len(other) != 2)
         except (TypeError, IndexError):
             return True
 
@@ -67,3 +80,17 @@ class Vector2D(tuple):
         x, y = self
         ox, oy = other
         return x * oy - y * ox
+
+    def project_to(self, other):
+        """
+        Compute the projection of this vector onto another one.
+        """
+        s = self.dot(other) / other.length
+        return tuple.__new__(Vector2D, (other[0] * s, other[1] * s))
+
+
+class Vector2DArray:
+    """
+    A wrapper to Numpy's array
+    """
+    pass
