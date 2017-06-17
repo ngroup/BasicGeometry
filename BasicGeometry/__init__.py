@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """
     BasicGeometry
-    :copyright: (c) 2015 by Chun Nien
+    :copyright: (c) 2015-2017 by Chun Nien
 """
 
 __version__ = '0.1'
