@@ -1,7 +1,6 @@
 from tiny2d import Vector2D
 
 
-
 def test_minus():
     vec1 = Vector2D(1, 2)
     vec2 = Vector2D(3, 5)
@@ -28,3 +27,13 @@ def test_cross():
     vec1 = Vector2D(1, 2)
     vec2 = Vector2D(3, 5)
     assert vec1.cross(vec2) == -1.0
+
+
+def test_divide():
+    vec1 = Vector2D(1, 2)
+    assert vec1 / 2 == (0.5, 1.0)
+
+
+def test_multiply():
+    vec1 = Vector2D(1, 2)
+    assert vec1 * 4 == (4., 8.)

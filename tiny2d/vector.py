@@ -49,6 +49,17 @@ class Vector2D(tuple):
 
     __rmul__ = __imul__ = __mul__
 
+    def __truediv__(self, other):
+        """divide the vector by a scalar
+        """
+        try:
+            other = float(other)
+        except TypeError:
+                return NotImplemented
+        return tuple.__new__(Vector2D, (self[0] / other, self[1] / other))
+
+    __itruediv__ = __truediv__
+
     def __eq__(self, other):
         try:
             return (self[0] == other[0] and self[1] == other[1]
@@ -62,6 +73,8 @@ class Vector2D(tuple):
                     or len(other) != 2)
         except (TypeError, IndexError):
             return True
+
+    __hash__ = tuple.__hash__
 
     def dot(self, other):
         '''
