@@ -1,6 +1,15 @@
 # tiny2d
 This tiny library is for dealing with application of 2D geometry in Python.
 
+## Installation
+Run pip
+```
+pip install tiny2d
+```
+or install the development version from github
+```
+pip install git+https://github.com/ngroup/tiny2d@master
+```
 
 ## Usage
 A minimal tiny2d application looks like this:
