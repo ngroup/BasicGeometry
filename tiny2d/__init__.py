@@ -3,7 +3,7 @@
     :copyright: (c) 2015-2017 by Chun Nien
 """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 from .polygon import Polygon
 from .line import Line
