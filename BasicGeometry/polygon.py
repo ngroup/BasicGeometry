@@ -1,22 +1,19 @@
-# -*- coding: utf-8 -*-
+import BasicGeometry as bg
 
 
 class Polygon(object):
-    def __init__(self):
-        self.vertices = []
+    def __init__(self, vertices=[]):
+        self.vertices = [bg.Vector2D(*v) for v in vertices]
 
-    def add_vertex(self, x, y):
-        self.vertices.append((x, y))
 
-    def shift(self, x, y):
-        new_vertices = [(px + x, py + y) for px, py in self.vertices]
-        self.vertices = new_vertices
+    def add_vertex(self, point):
+        self.vertices.append(bg.Vector2D(*point))
 
-    def reflect_x(self):
-        new_vertices = [(px, -1 * py) for px, py in self.vertices]
-        self.vertices = new_vertices
+    def translate(self, t_vector):
+        new_vertices = [p + bg.Vector2D(*t_vector) for p in self.vertices]
+        return Polygon(new_vertices)
 
-    def contains(self, x, y):
+    def contains(self, point):
         """Determine if a point is inside a given polygon or not
         Uses the 'Ray Casting' algorithm
         http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
@@ -24,7 +21,7 @@ class Polygon(object):
 
         n = len(self.vertices)
         inside = False
-
+        x, y = point
         p1x, p1y = self.vertices[0]
         for i in range(n + 1):
             p2x, p2y = self.vertices[i % n]
