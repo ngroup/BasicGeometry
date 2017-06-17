@@ -1,4 +1,4 @@
-from BasicGeometry import Polygon
+from tiny2d import Polygon
 
 
 def test_initialize():

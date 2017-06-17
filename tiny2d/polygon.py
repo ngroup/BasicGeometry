@@ -1,16 +1,16 @@
-import BasicGeometry as bg
+import tiny2d as t2d
 
 
 class Polygon(object):
     def __init__(self, vertices=[]):
-        self.vertices = [bg.Vector2D(*v) for v in vertices]
+        self.vertices = [t2d.Vector2D(*v) for v in vertices]
 
 
     def add_vertex(self, point):
-        self.vertices.append(bg.Vector2D(*point))
+        self.vertices.append(t2d.Vector2D(*point))
 
     def translate(self, t_vector):
-        new_vertices = [p + bg.Vector2D(*t_vector) for p in self.vertices]
+        new_vertices = [p + t2d.Vector2D(*t_vector) for p in self.vertices]
         return Polygon(new_vertices)
 
     def contains(self, point):

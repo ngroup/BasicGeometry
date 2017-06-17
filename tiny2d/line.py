@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 
 class Line(object):
     def __init__(self, start, end):

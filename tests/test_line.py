@@ -1,4 +1,4 @@
-from BasicGeometry.line import Line
+from tiny2d.line import Line
 
 
 class TestLine(unittest.TestCase):

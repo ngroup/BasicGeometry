@@ -1,9 +1,9 @@
 Copyright (c) 2015-2017 Chun Nien
 
-BasicGeometry is licensed under the terms of the MIT license, except for
-parts of BasicGeometry that were contributed under other licenses (see below).
+tiny2d is licensed under the terms of the MIT license, except for
+parts of tiny2d that were contributed under other licenses (see below).
 
-BasicGeometry's license follows:
+tiny2d's license follows:
 
 ====
 
@@ -27,7 +27,7 @@ SOFTWARE.
 
 
 ====
-The above license applies to all parts of BasicGeometry except
+The above license applies to all parts of tiny2d except
 (1) parts that were contributed under different licenses and
 (2) externally maintained libraries.
 
@@ -35,7 +35,7 @@ The above license applies to all parts of BasicGeometry except
 Files with different licenses are used, read the list carefully:
 
 
-BasicGeometry/vector.py:
+tiny2d/vector.py:
 Copyright (c) 2010 by Casey Duncan
 Portions copyright (c) 2009 The Super Effective Team
                             (www.supereffective.org)
@@ -65,4 +65,4 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 vector.py from planar is
-modified and tailored by Chun Nien for BasicGeometry
+modified and tailored by Chun Nien for tiny2d

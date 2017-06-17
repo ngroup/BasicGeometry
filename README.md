@@ -1,22 +1,23 @@
-# WhichSide
-This simple library is for dealing with the questions like "point is inside or outside of a polygon" or "point lies left side or right side of a line".
+# tiny2d
+This tiny library is for dealing with application of 2D geometry in Python.
 
 
 ## Usage
+A minimal tiny2d application looks like this:
 ```python
-import whichside as ws
+import tiny2d as t2d
 
 # create a Polygon
-polygon = ws.Polygon()
-
-# add vertex by the Polygon.add_vertex(x, y) method
-polygon.add_vertex(1, 1)
-polygon.add_vertex(1, 2)
-polygon.add_vertex(2, 3)
-polygon.add_vertex(3, 2.6)
-polygon.add_vertex(2.5, 0)
+polygon = t2d.Polygon([(1, 1), (1, 2), (2, 3), (3, 2.6), (2.5, 0)])
 
 # tell whether a point is inside the polygon
 polygon.contains(1.5, 1.5) # True
 polygon.contains(0, 1.5) # False
+```
+
+### Vector2D
+```python
+vec1 = Vector2D(1, 2)
+vec2 = Vector2D(3, 5)
+vec1 += vec2 # vec1 = (4, 7)
 ```

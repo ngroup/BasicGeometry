@@ -1,5 +1,5 @@
 """
-    BasicGeometry
+    tiny2d
     :copyright: (c) 2015-2017 by Chun Nien
 """
 

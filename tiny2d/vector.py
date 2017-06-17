@@ -1,5 +1,3 @@
-import numpy as np
-
 
 class Vector2D(tuple):
 
@@ -91,6 +89,6 @@ class Vector2D(tuple):
 
 class Vector2DArray:
     """
-    A wrapper to Numpy's array
+    A wrapper to Vector2D's array
     """
     pass

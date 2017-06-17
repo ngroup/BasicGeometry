@@ -1,4 +1,4 @@
-from BasicGeometry import Vector2D
+from tiny2d import Vector2D
 
 
 
