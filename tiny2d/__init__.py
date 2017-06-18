@@ -6,5 +6,5 @@
 __version__ = '0.0.2'
 
 from .polygon import Polygon
-from .line import Line
+from .line import Line, InfiniteLine
 from .vector import Vector2D
