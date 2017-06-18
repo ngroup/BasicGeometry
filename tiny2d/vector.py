@@ -13,9 +13,13 @@ class Vector2D(tuple):
         return self[1]
 
     @property
-    def length(self):
+    def length2(self):
         x, y = self
-        return (x * x + y * y) ** 0.5
+        return (x * x + y * y)
+
+    @property
+    def length(self):
+        return self.length2 ** 0.5
 
     def __add__(self, other):
         try:
@@ -96,8 +100,9 @@ class Vector2D(tuple):
         """
         Compute the projection of this vector onto another one.
         """
-        s = self.dot(other) / other.length
-        return tuple.__new__(Vector2D, (other[0] * s, other[1] * s))
+        other = Vector2D(*other)
+        u = self.dot(other) * other / other.length2
+        return tuple.__new__(Vector2D, (u[0], u[1]))
 
 
 class Vector2DArray:
